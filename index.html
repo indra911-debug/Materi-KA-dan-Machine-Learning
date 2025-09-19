@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scribe: Menerapkan Library KA dengan Algoritma Machine Learning</title>
+<style>
+    body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f0e1; /* warna cream lembut */
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    header {
+        background: #c59d5f;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    main {
+        padding: 20px;
+        max-width: 900px;
+        margin: auto;
+    }
+    section {
+        background: #fffaf0;
+        border-left: 6px solid #c59d5f;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #8b5e3c;
+        margin-top: 0;
+    }
+    ul {
+        margin-top: 0;
+        padding-left: 20px;
+    }
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: #c59d5f;
+        color: white;
+        margin-top: 30px;
+    }
+    a.link-jawaban {
+        display: inline-block;
+        margin-top: 10px;
+        background: #c59d5f;
+        color: white;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: background 0.3s;
+    }
+    a.link-jawaban:hover {
+        background: #8b5e3c;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Menerapkan Library KA dengan Algoritma Machine Learning</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Materi</h2>
+        <p>
+            Membuat sistem rekomendasi film sederhana. 
+            Dengan menggunakan algoritma <strong>Machine Learning</strong>, program dapat menganalisis preferensi tontonan pengguna 
+            dan merekomendasikan film lain yang mungkin disukai berdasarkan pola dari data pengguna lain.
+        </p>
+    </section>
+
+    <section>
+        <h2>Capaian Pembelajaran</h2>
+        <ul>
+            <li>Siswa mampu memahami konsep dasar algoritma Machine Learning sederhana.</li>
+            <li>Siswa mampu memanfaatkan library Kecerdasan Artifisial (KA) dalam pemrograman Python.</li>
+            <li>Siswa dapat membangun aplikasi rekomendasi film berbasis data pengguna.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tujuan Pembelajaran</h2>
+        <ul>
+            <li>Menjelaskan prinsip kerja sistem rekomendasi.</li>
+            <li>Mendemonstrasikan penggunaan library Machine Learning untuk menganalisis data film.</li>
+            <li>Mengimplementasikan antarmuka sederhana menggunakan Streamlit.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Manfaat dalam Kehidupan Sehari-hari</h2>
+        <ul>
+            <li>Memberi pemahaman bagaimana layanan seperti Netflix atau YouTube memberikan rekomendasi tontonan.</li>
+            <li>Meningkatkan keterampilan pengolahan data dan pemrograman yang berguna di berbagai bidang.</li>
+            <li>Mendorong pemikiran logis dan pemecahan masalah berbasis data.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pertanyaan Pemantik</h2>
+        <ul>
+            <li>Pernahkah Anda bertanya-tanya bagaimana Netflix atau YouTube dapat menebak film yang mungkin Anda sukai?</li>
+            <li>Apa keuntungan dan tantangan jika mesin membuat rekomendasi tontonan dibandingkan manusia?</li>
+            <li>Data apa saja yang menurut Anda dibutuhkan agar sistem rekomendasi dapat bekerja secara akurat?</li>
+            <li>Bagaimana dampak sistem rekomendasi terhadap kebiasaan menonton masyarakat?</li>
+        </ul>
+        <a class="link-jawaban" href="jawaban.html">Jawaban Pertanyaan Pemantik</a>
+    </section>
+
+    <!-- PENJELASAN DETAIL SESUAI TUJUAN PEMBELAJARAN -->
+    <section>
+        <h2>Penjelasan Materi</h2>
+        <p>
+            <strong>Prinsip Kerja Sistem Rekomendasi:</strong><br>
+            Sistem rekomendasi adalah teknologi yang digunakan untuk menyarankan produk, film, musik, atau konten lain 
+            kepada pengguna berdasarkan preferensi mereka. Prinsip dasarnya adalah mengidentifikasi pola 
+            kesukaan pengguna melalui analisis data, kemudian mencocokkannya dengan pilihan yang serupa.
+            Dalam konteks film, sistem rekomendasi dapat mempelajari riwayat tontonan pengguna dan menilai
+            kesamaan antara film yang sudah pernah ditonton dengan film lainnya.
+        </p>
+        <p>
+            <strong>Jenis-jenis Sistem Rekomendasi:</strong><br>
+            Terdapat beberapa pendekatan utama dalam sistem rekomendasi:
+        </p>
+        <ul>
+            <li><em>Content-Based Filtering:</em> Rekomendasi diberikan berdasarkan kesamaan karakteristik konten,
+                misalnya genre, sutradara, atau kata kunci film. Jika pengguna suka film bergenre drama, sistem
+                akan merekomendasikan film drama lain.</li>
+            <li><em>Collaborative Filtering:</em> Sistem mencari kesamaan pola di antara banyak pengguna.
+                Misalnya, jika pengguna A dan B menonton film yang sama dan menyukai film serupa, maka film yang
+                disukai B tetapi belum ditonton A akan direkomendasikan kepada A.</li>
+            <li><em>Hybrid System:</em> Menggabungkan dua pendekatan di atas untuk meningkatkan akurasi rekomendasi.</li>
+        </ul>
+        <p>
+            <strong>Penggunaan Library Machine Learning:</strong><br>
+            Dalam pemrograman Python, banyak library yang mendukung pengembangan sistem rekomendasi.
+            <code>pandas</code> digunakan untuk mengolah data seperti membaca dan memanipulasi dataset film.
+            <code>scikit-learn</code> menawarkan berbagai algoritma pembelajaran mesin, termasuk algoritma
+            untuk menghitung kesamaan (similarity) antar film atau pengguna.
+            <code>streamlit</code> memudahkan pembuatan antarmuka web interaktif sehingga sistem rekomendasi
+            dapat dijalankan langsung di browser dengan tampilan yang ramah pengguna.
+        </p>
+        <p>
+            <strong>Implementasi Antarmuka Sederhana dengan Streamlit:</strong><br>
+            Setelah algoritma rekomendasi dibangun, antarmuka pengguna perlu dirancang agar orang dapat
+            berinteraksi dengan sistem. Streamlit memungkinkan pembuatan web app hanya dengan Python,
+            tanpa memerlukan pengetahuan mendalam tentang HTML/CSS/JavaScript. Cukup dengan beberapa baris
+            kode, pengguna dapat memasukkan film favorit mereka dan sistem menampilkan daftar rekomendasi.
+        </p>
+        <p>
+            <strong>Penerapan dalam Kehidupan Nyata:</strong><br>
+            Sistem rekomendasi digunakan secara luas pada layanan hiburan seperti Netflix, Spotify,
+            YouTube, dan e-commerce seperti Tokopedia atau Amazon. Keunggulan utamanya adalah
+            meningkatkan pengalaman pengguna dengan memberikan saran yang relevan dan personal,
+            sekaligus membantu perusahaan meningkatkan keterlibatan dan penjualan.
+        </p>
+        <p>
+            Dengan mempelajari proses pembuatan sistem rekomendasi sederhana, siswa tidak hanya
+            memahami konsep algoritma Machine Learning tetapi juga memperoleh keterampilan praktis
+            dalam pemrograman data, yang sangat penting di era digital saat ini.
+        </p>
+    </section>
+
+    <section>
+        <h2>Tugas (LKPD)</h2>
+        <p><strong>Langkah-langkah membuat sistem rekomendasi film sederhana:</strong></p>
+        <ol>
+            <li>Siapkan dataset film (file CSV) berisi daftar judul dan kategori/genre film.</li>
+            <li>Buat lingkungan virtual Python (virtual environment) dan aktifkan.</li>
+            <li>Instal library yang dibutuhkan: <code>pandas</code>, <code>scikit-learn</code>, dan <code>streamlit</code>.</li>
+            <li>Buat file <code>rekomendasi.py</code> untuk memuat dan mengolah data serta algoritma rekomendasi.</li>
+            <li>Buat file <code>app.py</code> yang memanfaatkan <code>streamlit</code> sebagai antarmuka web sederhana.</li>
+            <li>Jalankan aplikasi dengan perintah: <code>streamlit run app.py</code> di terminal.</li>
+            <li>Buka browser dan akses <code>http://localhost:8501</code> untuk menggunakan sistem rekomendasi film.</li>
+        </ol>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 - LKPD Koding: Sistem Rekomendasi Film Sederhana <br>
+    Disusun oleh <strong>Indra Saputra, S.Pd</strong>
+</footer>
+
+</body>
+</html>
